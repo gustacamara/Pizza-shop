@@ -38,9 +38,12 @@ export function AccountMenu() {
           <span>Perfil da loja</span>
         </DropdownMenuItem>
 
-        <DropdownMenuItem className="text-rose-500 dark:text-rose-400">
+        <DropdownMenuItem>
           <LogOut className="text-rose-500 dark:text-rose-400" />
-          <Link to="/sign-in">
+          <Link
+            to="/sign-in"
+            className="w-full text-rose-500 dark:text-rose-400"
+          >
             <span>Sair</span>
           </Link>
         </DropdownMenuItem>
