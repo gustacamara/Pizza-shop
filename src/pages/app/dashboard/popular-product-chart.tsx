@@ -1,5 +1,4 @@
 import { Cell, Pie, PieChart } from 'recharts'
-import colors from 'tailwindcss/colors'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import {
@@ -12,7 +11,6 @@ import {
 const chartConfig = {
   product: {
     label: 'product',
-    color: colors.violet[500],
   },
 } satisfies ChartConfig
 
@@ -20,7 +18,7 @@ const data = [
   { product: 'Peperone', amount: 12 },
   { product: 'Robalo', amount: 60 },
   { product: 'Calabresa', amount: 20 },
-  { product: 'Moda da Casa', amount: 40 },
+  { product: 'Moda', amount: 40 },
   { product: '4 Queijos', amount: 49 },
 ]
 
@@ -38,7 +36,10 @@ export function PopularProducsChart() {
           </div>
         </CardHeader>
         <CardContent className="flex-1 pb-0">
-          <ChartContainer config={chartConfig} className="mx-auto max-w-fit">
+          <ChartContainer
+            config={chartConfig}
+            className="mx-auto min-h-full max-w-full"
+          >
             <PieChart>
               <ChartTooltip
                 cursor={false}
@@ -52,7 +53,6 @@ export function PopularProducsChart() {
                 innerRadius={58}
                 labelLine={false}
                 label={({ product, amount }) => `${product} (${amount})`}
-                className="text-white"
               >
                 {data.map((_, index) => {
                   return (
