@@ -8,7 +8,7 @@ export function DayOrdersAmountCard() {
       <Card className="mg-0 gap-2">
         <CardHeader className="pd-2 flex flex-row items-center justify-between space-y-0">
           <CardTitle className="text-base font-semibold">
-            Cancelamentos no (dia)
+            Cancelamentos (dia)
           </CardTitle>
           <Utensils className="text-primary-foreground h-4 w-4" />
         </CardHeader>
